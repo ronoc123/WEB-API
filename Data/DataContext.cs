@@ -16,5 +16,7 @@ namespace WEB_API_Udemy.Data
         }
 
         public DbSet<Character> Characters { get; set; }
+        public DbSet<User> Users { get; set; }
+
     }
 }
