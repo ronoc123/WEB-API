@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using WEB_API_Udemy.Dtos.Character;
+using WEB_API_Udemy.Dtos.Skill;
 using WEB_API_Udemy.Dtos.Weapon;
 
 namespace WEB_API_Udemy
@@ -16,6 +17,7 @@ namespace WEB_API_Udemy
             CreateMap<AddCharacterDto, Character>();
             CreateMap<UpdateCharacterDto, Character>();
             CreateMap<Weapon, GetWeaponDto>();
+            CreateMap<Skill, GetSkillDto>();
         }
     }
 }
