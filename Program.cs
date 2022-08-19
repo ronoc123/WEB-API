@@ -6,6 +6,7 @@ using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.Filters;
 using WEB_API_Udemy.Data;
 using WEB_API_Udemy.Services.CharacterServices;
+using WEB_API_Udemy.Services.CharacterServices.WeaponService;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -38,6 +39,10 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
      };
 }
 );
+
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<IWeaponService, WeaponService>();
+
 
 var app = builder.Build();
 
